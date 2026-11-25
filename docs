@@ -1,0 +1,204 @@
+# Lista do produto e requisitos — Caderneta Digital do Coordenador de Turno
+
+## Actores e perfis
+
+| Actor | Tipo | O que faz |
+|---|---|---|
+| Administrador | Perfil de utilizador | Gere utilizadores, perfis, turnos, cursos, classes e turmas |
+| Coordenador de turno | Perfil de utilizador (principal) | Regista alunos, ocorrências, medidas, contactos e reuniões; consulta históricos |
+| Direcção | Perfil de utilizador (só leitura) | Consulta relatórios e indicadores |
+| Encarregado de educação | Actor externo | É contactado e convocado; não usa a aplicação |
+| Professor / Funcionário | Actor externo | Pode ser testemunha ou interveniente; não usa a aplicação |
+
+## Requisitos funcionais
+
+RF01 Autenticar por palavra-passe · RF02 Gerir utilizadores e perfis · RF03 Gerir turnos, cursos, classes e turmas · RF04 Registar e consultar alunos · RF05 Registar e associar encarregados · RF06 Registar ocorrências com descrição detalhada · RF07 Associar vários alunos a uma ocorrência · RF08 Registar testemunhas e intervenientes · RF09 Registar medidas e decisões · RF10 Acompanhar o cumprimento das medidas · RF11 Registar contactos com encarregados · RF12 Agendar reuniões · RF13 Enviar notificações e lembretes · RF14 Consultar o histórico individual do aluno · RF15 Gerar relatórios e indicadores.
+
+## Requisitos não funcionais
+
+- RNF01 Usabilidade: seguir as 10 heurísticas de Nielsen.
+- RNF02 Acessibilidade (WCAG 2.2, mínimo): contraste suficiente, texto alternativo, uso só com teclado, etiquetas claras nos campos, mensagens de erro que expliquem a correcção.
+- RNF03 Segurança: palavras-passe com hash, acesso por perfil, sessões protegidas.
+- RNF04 Protecção de dados: todos os dados de teste e demonstração são fictícios (Lei n.º 22/11).
+- RNF05 Responsividade: funciona no computador e no telemóvel.
+- RNF06 Portabilidade: executa localmente seguindo o README.
+- RNF07 Desempenho: listas e pesquisas respondem em menos de 2 segundos com dados de demonstração.
+- RNF08 Manutenibilidade: código em ramos por issue, revisto por pares, com testes dos módulos principais.
+
+## Lista do produto ordenada (a ordem corresponde ao número da issue)
+
+As issues #1 a #7 são técnicas e pertencem à Sprint 1. As histórias seguem por ordem de prioridade; `produto-minimo` marca os cinco módulos obrigatórios.
+
+| # | Item | Produto mínimo | Justificação |
+|---|---|---|---|
+| 1 | Redigir processo.md (Parte I do laboratório) | Não | Sprint 1: base do projecto |
+| 2 | Criar quadro GitHub Projects, campo Iteration e vistas | Não | Sprint 1: base do projecto |
+| 3 | Registar planeamento e reuniões diárias da Sprint 1 | Não | Sprint 1: base do projecto |
+| 4 | Levantar actores, perfis e requisitos | Não | Sprint 1: base do projecto |
+| 5 | Diagrama de casos de uso | Não | Sprint 1: base do projecto |
+| 6 | Esqueleto da aplicação (Node/Express + React + SQLite) a correr localmente | Não | Sprint 1: base do projecto |
+| 7 | Modelo de dados inicial | Não | Sprint 1: base do projecto |
+| 8 | US01 Iniciar sessão com palavra-passe | Sim | Base de tudo; sem login não há perfis nem dados protegidos. |
+| 9 | US02 Acesso por perfil | Sim | Segurança mínima obrigatória; depende da US01. |
+| 10 | US03 Gerir turnos, cursos, classes e turmas | Sim | Os alunos precisam de uma turma antes de serem registados. |
+| 11 | US04 Registar alunos | Sim | Necessário para registar ocorrências. |
+| 12 | US05 Consultar e pesquisar alunos | Sim | Completa a gestão de alunos do produto mínimo. |
+| 13 | US06 Registar ocorrência | Sim | Núcleo do problema do coordenador. |
+| 14 | US07 Associar vários alunos a uma ocorrência | Sim | Exigido no produto mínimo e no primeiro cenário de utilização. |
+| 15 | US08 Registar medidas aplicadas e decisões | Sim | Quarto módulo do produto mínimo. |
+| 16 | US09 Consultar histórico do aluno | Sim | Quinto módulo do produto mínimo; depende das US06 a US08. |
+| 17 | US10 Registar testemunhas e intervenientes | Não | Enriquece a ocorrência e responde ao primeiro cenário; logo após o produto mínimo. |
+| 18 | US11 Acompanhar o cumprimento das medidas | Não | Responde ao segundo cenário; depende da US08. |
+| 19 | US12 Registar e associar encarregados de educação | Não | Necessário para os contactos; fora do produto mínimo. |
+| 20 | US13 Registar contactos com encarregados | Não | Responde ao segundo cenário; depende da US12. |
+| 21 | US14 Agendar reuniões | Não | Útil, mas não bloqueia o fluxo principal. |
+| 22 | US15 Notificações e lembretes dentro da aplicação | Não | Depende das US11 e US14. Proposta de alteração: notificações só dentro da aplicação. |
+| 23 | US16 Relatórios e indicadores | Não | Responde ao terceiro cenário; precisa de dados das sprints anteriores. |
+| 24 | US17 Registo de auditoria (proposta) | Não | Proposta do grupo; só se houver tempo nas últimas sprints. |
+
+## Pedidos propostos, alterados ou rejeitados
+
+- **Proposto:** US17 Registo de auditoria.
+- **Alterado:** «Enviar notificações» passa a notificações dentro da aplicação (US15). O envio por SMS ou e-mail exige serviços externos e dados reais, e fica rejeitado nesta versão.
+
+## Histórias de utilizador
+
+### #8 US01 Iniciar sessão com palavra-passe
+
+**Como** utilizador registado, **quero** iniciar sessão com palavra-passe, **para** aceder apenas ao que o meu perfil permite.
+
+**Critérios de aceitação**
+- [ ] Credenciais válidas dão acesso; inválidas mostram erro que explica como corrigir
+- [ ] Palavras-passe guardadas com hash
+- [ ] Terminar sessão funciona
+
+### #9 US02 Acesso por perfil
+
+**Como** administrador, **quero** atribuir um perfil a cada utilizador (Administrador, Coordenador, Direcção), **para** cada um ver e fazer só o que lhe é permitido.
+
+**Critérios de aceitação**
+- [ ] Coordenador não acede à gestão de utilizadores
+- [ ] Direcção só consulta e vê relatórios
+- [ ] Acesso negado mostra mensagem clara
+
+### #10 US03 Gerir turnos, cursos, classes e turmas
+
+**Como** administrador, **quero** criar e editar turnos, cursos, classes e turmas, **para** organizar os alunos da instituição.
+
+**Critérios de aceitação**
+- [ ] Criar, editar e listar turmas
+- [ ] Turma pertence a curso, classe e turno
+- [ ] Campos com etiquetas claras e erros explicativos
+
+### #11 US04 Registar alunos
+
+**Como** coordenador de turno, **quero** registar um aluno com os seus dados e a sua turma, **para** identificar quem está envolvido nas ocorrências.
+
+**Critérios de aceitação**
+- [ ] Aluno guardado com nome, número e turma
+- [ ] Dados de teste são fictícios
+- [ ] Validação dos campos obrigatórios
+
+### #12 US05 Consultar e pesquisar alunos
+
+**Como** coordenador de turno, **quero** pesquisar alunos por nome ou turma, **para** encontrar rapidamente o aluno de que preciso.
+
+**Critérios de aceitação**
+- [ ] Pesquisa por nome e filtro por turma
+- [ ] Lista adapta-se ao ecrã do telemóvel
+
+### #13 US06 Registar ocorrência
+
+**Como** coordenador de turno, **quero** registar uma ocorrência com data, local e descrição detalhada, **para** guardar o que aconteceu.
+
+**Critérios de aceitação**
+- [ ] Ocorrência guardada com data, local e descrição
+- [ ] Aparece na lista de ocorrências
+- [ ] Só utilizadores com permissão a registam
+
+### #14 US07 Associar vários alunos a uma ocorrência
+
+**Como** coordenador de turno, **quero** associar vários alunos à mesma ocorrência, **para** registar discussões que envolvem alunos de turmas diferentes.
+
+**Critérios de aceitação**
+- [ ] Seleccionar um ou mais alunos de turmas diferentes
+- [ ] Ocorrência aparece no histórico de cada aluno associado
+
+### #15 US08 Registar medidas aplicadas e decisões
+
+**Como** coordenador de turno, **quero** registar a medida aplicada a cada aluno e a decisão tomada, **para** documentar o que foi decidido.
+
+**Critérios de aceitação**
+- [ ] Medida associada a ocorrência e aluno
+- [ ] Data e descrição da medida guardadas
+
+### #16 US09 Consultar histórico do aluno
+
+**Como** coordenador de turno, **quero** ver o histórico de ocorrências e medidas de um aluno, **para** acompanhar o percurso disciplinar.
+
+**Critérios de aceitação**
+- [ ] Histórico por ordem cronológica
+- [ ] Mostra ocorrências e medidas do aluno
+
+### #17 US10 Registar testemunhas e intervenientes
+
+**Como** coordenador de turno, **quero** registar testemunhas e intervenientes de uma ocorrência, **para** ter o contexto completo do que aconteceu.
+
+**Critérios de aceitação**
+- [ ] Adicionar professor, funcionário ou aluno com o seu papel
+- [ ] Visível no detalhe da ocorrência
+
+### #18 US11 Acompanhar o cumprimento das medidas
+
+**Como** coordenador de turno, **quero** marcar o estado de cada medida (pendente, em cumprimento, cumprida), **para** saber se a medida foi cumprida.
+
+**Critérios de aceitação**
+- [ ] Estado alterável e com data
+- [ ] Filtro por estado
+
+### #19 US12 Registar e associar encarregados de educação
+
+**Como** coordenador de turno, **quero** registar encarregados e associá-los aos alunos, **para** saber quem contactar.
+
+**Critérios de aceitação**
+- [ ] Um aluno pode ter um ou mais encarregados
+- [ ] Contacto telefónico guardado (fictício)
+
+### #20 US13 Registar contactos com encarregados
+
+**Como** coordenador de turno, **quero** registar cada contacto feito com um encarregado, **para** provar que o encarregado foi informado.
+
+**Critérios de aceitação**
+- [ ] Contacto com data, meio e resumo
+- [ ] Aparece no histórico do aluno
+
+### #21 US14 Agendar reuniões
+
+**Como** coordenador de turno, **quero** agendar reuniões de acompanhamento, **para** organizar o atendimento.
+
+**Critérios de aceitação**
+- [ ] Reunião com data, hora, participantes e motivo
+- [ ] Lista das próximas reuniões
+
+### #22 US15 Notificações e lembretes dentro da aplicação
+
+**Como** coordenador de turno, **quero** receber lembretes de reuniões e medidas por cumprir, **para** não me esquecer de acompanhamentos.
+
+**Critérios de aceitação**
+- [ ] Lembrete visível ao iniciar sessão
+- [ ] Pode ser marcado como lido
+
+### #23 US16 Relatórios e indicadores
+
+**Como** membro da direcção, **quero** ver o resumo de ocorrências por turma e período, **para** acompanhar a disciplina da escola.
+
+**Critérios de aceitação**
+- [ ] Resumo por turma e por trimestre
+- [ ] Perfil Direcção só consulta
+
+### #24 US17 Registo de auditoria (proposta)
+
+**Como** administrador, **quero** ver quem criou ou alterou cada registo e quando, **para** garantir responsabilização e confiança nos dados.
+
+**Critérios de aceitação**
+- [ ] Cada ocorrência mostra autor e data da última alteração
