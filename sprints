@@ -1,6 +1,6 @@
 # Sprint 1
 
-Período: semanas simuladas 1 e 2 (24 a 27 de Novembro de 2026, conforme o enunciado).
+Período: semanas simuladas 1 e 2 (24 a 27 de Novembro de 2026, conforme o enunciado). Encerrada em 27/11.
 Equipa: João Nzinga (Product Owner), Joel Cundacami (Scrum Master), Jilson Dimba (Developer).
 
 ## Planeamento
@@ -17,56 +17,59 @@ Equipa: João Nzinga (Product Owner), Joel Cundacami (Scrum Master), Jilson Dimb
 | #6 Esqueleto da aplicação | Jilson | João |
 | #7 Modelo de dados inicial | Jilson | Joel |
 
-Data do planeamento: [dd/mm]. Nota de transparência: [se foi registado depois do primeiro dia, escrever aqui o motivo].
+Nota de transparência: o planeamento e os restantes registos desta sprint foram escritos no GitHub a 27/11, depois de o repositório e o quadro estarem configurados. Por isso as datas dos pull requests não coincidem com os dias 24 e 25. Os registos diários abaixo descrevem o que o grupo fez em cada dia.
 
 ## Reuniões diárias
 
+Nesta sprint o trabalho foi feito por um único membro, [O MEU NOME]. Os restantes membros não registaram contribuição, e isso fica escrito para não haver dúvidas sobre quem fez o quê.
+
 ### 24 de Novembro
-- João — Fiz: [ ] · Vou fazer: [ ] · Impedimentos: [ ]
-- Joel — Fiz: [ ] · Vou fazer: [ ] · Impedimentos: [ ]
-- Jilson — Fiz: [ ] · Vou fazer: [ ] · Impedimentos: [ ]
+- [João Nzinga] — Fiz: [indicar, ou «sem actividade»] · Vou fazer: [indicar] · Impedimentos: trabalho a ser feito sozinho
+- Outros membros — Sem contribuição registada.
 
 ### 25 de Novembro
-- João — Fiz: [ ] · Vou fazer: [ ] · Impedimentos: [ ]
-- Joel — Fiz: [ ] · Vou fazer: [ ] · Impedimentos: [ ]
-- Jilson — Fiz: [ ] · Vou fazer: [ ] · Impedimentos: [ ]
+- [João Nzinga] — Fiz: [indicar, ou «sem actividade»] · Vou fazer: [indicar] · Impedimentos: trabalho a ser feito sozinho
+- Outros membros — Sem contribuição registada.
 
-### 26 e 27 de Novembro
-Se a sprint decorrer até 27, copiar o modelo acima, uma entrada por dia, registada no próprio dia.
+### 26 de Novembro
+- [João Nzinga] — Fiz: [indicar, ou «sem actividade»] · Vou fazer: [indicar] · Impedimentos: trabalho a ser feito sozinho
+- Outros membros — Sem contribuição registada.
+
+### 27 de Novembro
+- [João Nzinga] — Fiz: criei as issues #1 a #7, o quadro, enviei os ficheiros para o repositório e convidei o judsonp · Vou fazer: planeamento da Sprint 2 · Impedimentos: trabalho a ser feito sozinho
+- Outros membros — Sem contribuição registada.
 
 ## Contribuições e revisões
 
-| Membro | Contribuição relevante (link do PR) | Revisão feita a um colega (link) |
+| Membro | Contribuição relevante (link do PR ou commit) | Revisão feita a um colega (link) |
 |---|---|---|
-| João | [ ] | [ ] |
-| Joel | [ ] | [ ] |
-| Jilson | [ ] | [ ] |
+| [João Nzinga | [link] | Sem revisão por colega nesta sprint (trabalho feito por um só membro) |
+| Outros membros | Sem contribuição registada | Sem revisão registada |
 
 ## Revisão da sprint
 
-- O que foi demonstrado: [ ]
-- Demonstração enviada ao coordenador de turno (WhatsApp ou aula): [data e link]
-- Retorno recebido (ou, se não houver, nota de que o Product Owner representou o coordenador): [ ]
-- Lista do produto ajustada: [ ]
+- O que foi demonstrado: repositório com processo.md, lista do produto e registo da sprint; quadro Kanban com as issues da Sprint 1.
+- Retorno recebido: [escrever o retorno. Se não houver: «Sem retorno do coordenador até ao fecho da sprint; o Product Owner representou o coordenador.»]
+- Lista do produto ajustada: [indicar ou escrever «sem alterações»]
+- Itens que não cumpriram a Definição de Pronto: [indicar, ex.: #6 e #7]. Voltam à lista do produto e passam para a Sprint 2.
 
 ## Retrospectiva
 
-- O que correu bem: [ ]
-- O que podemos melhorar: [ ]
-- Melhoria que vamos aplicar na Sprint 2: [ ]
-- Secção «Desafio a vigiar» do processo.md revista: [sim/não]
+- O que correu bem: o grupo ficou com o processo definido e a lista do produto escrita.
+- O que podemos melhorar: registar os eventos no próprio dia e começar o quadro mais cedo.
+- Melhoria que vamos aplicar na Sprint 2: fazer o planeamento a 28/11, com pull request nesse dia, e actualizar as diárias todos os dias.
+- Secção «Desafio a vigiar» do processo.md revista: não (a preencher após ler Ahmad et al., 2013).
 
 ## Medidas de fluxo (calcular a partir do quadro)
 
 | Medida | Valor |
 |---|---|
-| Trabalho em curso (máximo atingido) | [ ] |
-| Débito (itens concluídos na sprint) | [ ] |
-| Idade do item mais antigo ainda em curso | [ ] |
-| Tempo de ciclo de três issues concluídas | #[ ]: [ ] · #[ ]: [ ] · #[ ]: [ ] |
+| Trabalho em curso (máximo atingido) | [contar no quadro] |
+| Débito (itens concluídos na sprint) | [contar a coluna Concluído] |
+| Idade do item mais antigo ainda em curso | [dias desde que entrou em Em curso] |
 
-Interpretação e o que mudar na Sprint 2: [um parágrafo]
+Interpretação: [uma ou duas frases, por exemplo: «Concluímos poucos itens porque começámos o quadro tarde; na Sprint 2 vamos manter no máximo 3 itens em curso.»]
 
 ## Etiqueta
 
-`sprint-1` criada no último commit da sprint: [ ]
+`sprint-1` criada no último commit da sprint a 27/11.
